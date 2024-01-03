@@ -1,0 +1,13 @@
+bazel_dep(name = "rules_go", version = "0.44.1")
+bazel_dep(name = "gazelle", version = "0.35.0")
+
+go_sdk = use_extension("@rules_go//go:extensions.bzl", "go_sdk")
+go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
+go_deps.from_file(go_mod = "//:go.mod")
+
+use_repo(go_deps)
+
+use_repo(
+    go_deps,
+    "org_golang_x_example_hello"
+)
