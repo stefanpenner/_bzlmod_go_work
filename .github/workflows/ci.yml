@@ -1,0 +1,25 @@
+---
+name: CI
+
+on:  # yamllint disable rule:truthy
+  push:
+    branches:
+      - master
+    tags:
+      - "*.*.*"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test fetch
+        run: bazel fetch //...
+
+      - name: Test
+        run: bazel test //...
