@@ -1,9 +1,0 @@
-load("@gazelle//:def.bzl", "gazelle")
-
-gazelle(
-    name = "gazelle",
-    args = [
-        "-go_naming_convention=import",
-        "-go_naming_convention_external=import",
-    ],
-)
