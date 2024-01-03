@@ -1,0 +1,18 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+load("@gazelle//:def.bzl", "gazelle")
+
+gazelle(name = "gazelle")
+
+go_library(
+    name = "hello_lib",
+    srcs = ["hello.go"],
+    importpath = "golang.org/x/example/hello",
+    visibility = ["//visibility:private"],
+    deps = ["//reverse"],
+)
+
+go_binary(
+    name = "hello",
+    embed = [":hello_lib"],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,20 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "reverse",
+    srcs = [
+        "int.go",
+        "reverse.go",
+    ],
+    importpath = "golang.org/x/example/hello/reverse",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "reverse_test",
+    srcs = [
+        "example_test.go",
+        "reverse_test.go",
+    ],
+    embed = [":reverse"],
+)
