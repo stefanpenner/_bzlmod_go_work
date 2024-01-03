@@ -20,3 +20,18 @@ func TestString(t *testing.T) {
 		}
 	}
 }
+
+func TestInt(t *testing.T) {
+	for _, c := range []struct {
+		in, want int
+	}{
+		{1234, 4321},
+		{123456789, 987654321},
+		{0, 0},
+	} {
+		got := Int(c.in)
+		if got != c.want {
+			t.Errorf("String(%q) == %q, want %q", c.in, got, c.want)
+		}
+	}
+}

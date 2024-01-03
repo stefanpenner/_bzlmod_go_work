@@ -1,15 +1,22 @@
-load("@rules_go//go:def.bzl", "go_binary", "go_library")
+load("@rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
 
 go_library(
     name = "hello_lib",
     srcs = ["hello.go"],
     importpath = "example.com/hello",
     visibility = ["//visibility:private"],
-    deps = ["//example/hello/reverse"],
+    deps = ["@org_golang_x_example_hello//reverse:reverse"],
 )
 
 go_binary(
     name = "hello",
     embed = [":hello_lib"],
     visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "hello_test",
+    srcs = ["hello_test.go"],
+    embed = [":hello_lib"],
+    deps = ["@com_github_stretchr_testify//assert"],
 )
