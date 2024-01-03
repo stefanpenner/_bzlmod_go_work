@@ -1,7 +1,13 @@
 load("@rules_go//go:def.bzl", "go_binary", "go_library")
 load("@gazelle//:def.bzl", "gazelle")
 
-gazelle(name = "gazelle")
+gazelle(
+    name = "gazelle",
+    args = [
+        "-go_naming_convention=import",
+        "-go_naming_convention_external=import",
+    ],
+)
 
 go_library(
     name = "hello_lib",

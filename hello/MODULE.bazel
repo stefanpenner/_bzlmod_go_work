@@ -5,9 +5,15 @@ go_sdk = use_extension("@rules_go//go:extensions.bzl", "go_sdk")
 go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
 go_deps.from_file(go_mod = "//:go.mod")
 
-use_repo(go_deps)
+bazel_dep(
+    name = "org_golang_x_example_hello"
+)
+
+local_path_override(
+    module_name = "org_golang_x_example_hello",
+    path = "../example/hello"
+)
 
 use_repo(
     go_deps,
-    "org_golang_x_example_hello"
 )
