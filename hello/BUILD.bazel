@@ -5,7 +5,7 @@ go_library(
     srcs = ["hello.go"],
     importpath = "example.com/hello",
     visibility = ["//visibility:private"],
-    deps = ["@org_golang_x_example_hello//reverse:reverse"],
+    deps = ["//example/hello/reverse"],
 )
 
 go_binary(

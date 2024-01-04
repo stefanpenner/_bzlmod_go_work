@@ -3,13 +3,6 @@ module( name = "hello" )
 bazel_dep(name = "rules_go", version = "0.44.1")
 bazel_dep(name = "gazelle", version = "0.35.0")
 
-bazel_dep(name = "org_golang_x_example_hello")
-
-local_path_override(
-    module_name = "org_golang_x_example_hello",
-    path = "../example/hello",
-)
-
 go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
 go_deps.from_file(go_mod = "//:go.mod")
 
