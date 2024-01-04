@@ -5,12 +5,12 @@
 package reverse_test
 
 import (
-	"fmt"
-
 	"golang.org/x/example/hello/reverse"
+  "testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func ExampleString() {
-	fmt.Println(reverse.String("hello"))
-	// Output: olleh
+func TestExampleString(t *testing.T) {
+	assert.Equal(t, reverse.String("hello"), "olleh")
 }
