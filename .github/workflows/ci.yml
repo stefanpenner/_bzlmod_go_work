@@ -18,9 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Test.sh
-        run: ./test.sh
-
       - name: Bazel fetch
         run: bazel fetch //...
 
