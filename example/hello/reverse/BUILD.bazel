@@ -17,4 +17,5 @@ go_test(
         "reverse_test.go",
     ],
     embed = [":reverse"],
+    deps = ["@com_github_stretchr_testify//assert"],
 )

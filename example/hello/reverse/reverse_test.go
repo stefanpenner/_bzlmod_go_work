@@ -4,7 +4,11 @@
 
 package reverse
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func TestString(t *testing.T) {
 	for _, c := range []struct {
@@ -15,9 +19,7 @@ func TestString(t *testing.T) {
 		{"", ""},
 	} {
 		got := String(c.in)
-		if got != c.want {
-			t.Errorf("String(%q) == %q, want %q", c.in, got, c.want)
-		}
+		assert.Equal(t, c.want, got)
 	}
 }
 
@@ -30,8 +32,6 @@ func TestInt(t *testing.T) {
 		{0, 0},
 	} {
 		got := Int(c.in)
-		if got != c.want {
-			t.Errorf("String(%q) == %q, want %q", c.in, got, c.want)
-		}
+		assert.Equal(t, c.want, got)
 	}
 }
