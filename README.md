@@ -1,5 +1,26 @@
 # Experimenting
 
+# Workflows
+
+## adding a dependency
+
+1. update go code: to include the new dependency
+
+```go
+# file:example/hello/reverse_test.go
+
+# import the new dependency
+import "gotest.tools/v3/assert"
+
+...
+
+# use the new dependency
+assert.Equal(t, c.want, got)
+````
+
+2. run `go mod tidy` in the example/hello directory. This updates go.mod / go.sum
+3. run gazelle
+
 # What works
 
 - [x] at "head" development for local dependencies (hello depends on example/hello for reverse.String and the local reverse.Int)

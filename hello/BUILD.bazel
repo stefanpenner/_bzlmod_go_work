@@ -1,5 +1,10 @@
 load("@rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
 
+alias(
+    name = "gazelle",
+    actual = "//:gazelle",
+)
+
 go_library(
     name = "hello_lib",
     srcs = ["hello.go"],

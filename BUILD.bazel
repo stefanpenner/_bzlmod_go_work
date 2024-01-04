@@ -6,4 +6,5 @@ gazelle(
         "-go_naming_convention=import",
         "-go_naming_convention_external=import",
     ],
+    visibility = ["//visibility:public"],
 )

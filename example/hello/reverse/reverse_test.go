@@ -5,9 +5,8 @@
 package reverse
 
 import (
-	"testing"
-
-	"github.com/stretchr/testify/assert"
+  "testing"
+  "gotest.tools/v3/assert"
 )
 
 func TestString(t *testing.T) {
