@@ -11,7 +11,6 @@ func TestHello(t *testing.T) {
 	a, b := Output()
 	fmt.Println(a, b)
 
-	assert.Equal(t, "olleH", a)
-	assert.Equal(t, 1234, b)
-
+	assert.StefEqual(t, "olleH", a)
+	assert.StefEqual(t, 1234, b)
 }

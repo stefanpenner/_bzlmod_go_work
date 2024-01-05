@@ -1,7 +1,7 @@
 go 1.21.5
 
-use (
-  ./example/hello/
-)
+use ./example/hello/
 
 use ./hello
+
+replace github.com/stretchr/testify => github.com/stefanpenner/testify v0.5.1

@@ -1,3 +1,2 @@
-github.com/stretchr/objx v0.5.0 h1:1zr/of2m5FGMsad5YfcqgdqdWrIhu+EBEJRhR1U7z/c=
-github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=
-gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
+github.com/stefanpenner/testify v0.5.1 h1:yg1dmclGF8H4c5ZtajfK6z4mUemnnQX1q8z1LIaqqA4=
+github.com/stefanpenner/testify v0.5.1/go.mod h1:LZ02lxBfF+JCTGmBu/SyjoaIlOF6u2nxMP788uhnZlI=
