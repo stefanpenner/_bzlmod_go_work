@@ -2,7 +2,7 @@ bazel_dep(name = "gazelle", version = "0.35.0")
 git_override(
     module_name = "gazelle",
     remote = "https://github.com/stefanpenner/bazel-gazelle.git",
-    commit = "4a351bbaf666f50ca298600cb6adae7845603355"
+    commit = "f1d7abe21747c32e4b83f72a7366bcc81ed45eec"
 )
 
 # local_path_override(
